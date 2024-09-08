@@ -1,0 +1,75 @@
+// 格線系統
+$gutter-width:24px;
+$grid-num:12;
+.row {
+    margin-right: -$gutter-width/2;
+    margin-left: -$gutter-width/2;
+}
+
+@for $i from 1 through $grid-num {
+    .col-#{$i} {
+        width: 100% * ($i/$grid-num);
+        padding-right: $gutter-width/2;
+        padding-left: $gutter-width/2;
+    }
+}
+
+@include pad {
+    .row {
+        flex-wrap: wrap;
+    }
+    .col-3 {
+        width: 50%;
+    }
+    .col-4 {
+        width: 100%;
+    }
+    @for $i from 1 through $grid-num {
+        .col-md-#{$i} {
+            width: 100% * ($i/$grid-num);
+            padding-right: $gutter-width/2;
+            padding-left: $gutter-width/2;
+        }
+    }
+}
+
+@include phone {
+    .row {
+        flex-wrap: wrap;
+    }
+    .col-3 {
+        width: 100%;
+    }
+    .col-4 {
+        width: 100%;
+    }
+    .col-5 {
+        width: 100%;
+    }
+    .col-6 {
+        width: 100%;
+    }
+    .col-7 {
+        width: 100%;
+    }
+}
+
+.container {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding-left: 12px;
+    padding-right: 12px;
+    @include pad {
+        max-width: 720px;
+    }
+    @include phone {
+        max-width: 372px;
+    }
+}
+
+@include phone {
+    .container-sm-full {
+        max-width: 576px;
+        padding: 0 12px;
+    }
+}

@@ -1,0 +1,63 @@
+$mb:0;
+@for $i from 1 through 10 {
+    .mb-#{$i} {
+        margin-bottom: ($mb + $i)*8px;
+    }
+}
+
+;
+@for $i from 1 through 10 {
+    @include pad {
+        .mb-md-#{$i} {
+            margin-bottom: ($mb + $i)*8px;
+        }
+    }
+}
+
+;
+@for $i from 1 through 10 {
+    @include phone {
+        .mb-sm-#{$i} {
+            margin-bottom: ($mb + $i)*8px;
+        }
+    }
+}
+
+;
+$mr:0;
+@for $i from 1 through 10 {
+    .mr-#{$i} {
+        margin-right: ($mr + $i)*8px;
+    }
+}
+
+;
+@for $i from 1 through 10 {
+    @include pad {
+        .mr-md-#{$i} {
+            margin-right: ($mr + $i)*8px;
+        }
+    }
+}
+
+;
+@for $i from 1 through 10 {
+    @include phone {
+        .mr-sm-#{$i} {
+            margin-right: ($mr + $i)*8px;
+        }
+    }
+}
+
+;
+.mt-auto {
+    margin-top: auto;
+}
+
+.mr-auto {
+    margin-right: auto;
+}
+
+.ml-auto {
+    margin-left: auto;
+}
